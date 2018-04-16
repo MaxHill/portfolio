@@ -1,0 +1,123 @@
+html
+  +responsive-font(1.5vw, 16px, 20px, 16px)
+  // 3vw constrained between 16px and 20px (with a fallback of 16px for non-supporting browsers)
+
+body
+  // sass-lint:disable-block no-duplicate-properties no-misspelled-properties no-vendor-prefixes property-sort-order
+  font-family: $font-default
+  color: $color-text
+  line-height: 1.45
+
+  text-rendering: optimizeLegibility
+  text-rendering: geometricPrecision
+  font-smooth: always
+
+  font-smoothing: antialiased
+  -moz-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  // sass-lint:enable-block no-duplicate-properties no-misspelled-properties no-vendor-prefixes property-sort-order
+
+// modular-scale
+$scale: (2.441rem, 1.953rem, 1.563rem, 1.25rem, 1rem, 0.8rem, 0.64rem, 0.512rem)
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family: $font-headings
+  font-weight: $font-weight-bold
+  letter-spacing: 0.05rem
+  line-height: 1.2;
+  margin: 1.3rem 0 0.5rem
+
+  &.-no-margin
+    margin: 0
+
+
+.h1,
+h1
+  font-size: nth($scale, 1)
+
+.h2,
+h2
+  font-size: nth($scale, 2)
+
+.h3,
+h3
+  font-size: nth($scale, 3)
+
+.h4,
+h4
+  font-size: nth($scale, 4)
+
+.h5,
+h5
+  font-size: nth($scale, 5)
+
+.h6,
+h6
+  font-size: nth($scale, 6)
+
+p
+  font-size: nth($scale, 5)
+  margin: 0 0 1.3rem
+
+  &.-small
+    font-size: nth($scale, 6)
+    margin: 0 0 1.3rem
+
+  &.-big
+    font-weight: 700
+
+  &.-no-margin
+    margin: 0
+
+
+a,
+a
+  color: $color-link
+  text-decoration: none
+
+  &:hover
+    color: $color-link-hover
+
+  &:focus,
+  &:active
+    color: $color-link-active
+    outline: none
+
+strong
+  font-weight: $font-weight-bold
+
+em
+  font-style: italic
+
+
+code,
+pre
+  background-color: $gray
+  border-radius: 3px
+  display: inline-block
+  font-family: monospace, serif
+  font-size: 1rem
+  padding: 0.5rem
+
+blockquote
+  font-style: italic;
+  line-height: 1.5rem;
+
+  &::before
+    color: $gray
+    content: open-quote
+    font-size: 4em
+    line-height: 0.1em
+    margin-right: 0.25em
+    vertical-align: -0.4em

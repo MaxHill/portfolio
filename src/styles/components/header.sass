@@ -1,0 +1,28 @@
+.header
+  overflow: hidden
+  position: relative
+
+  &::before
+    color: $color-gray-light
+    content: attr(data-background) 
+    font-family: $font-headings
+    font-size: 30vw
+    font-weight: 900
+    line-height: 25vw
+    position: fixed 
+    z-index: -1
+
+  > .images
+    width: 400px
+    height: 400px
+    position: relative
+
+    > .big,
+    > .small
+      margin: auto
+      -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      background-color: green
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      position: absolute
+
+

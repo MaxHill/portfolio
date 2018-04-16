@@ -1,0 +1,14 @@
+
+$gray: #efefef;
+$color-blue: #26344a;
+$color-black: #24263C;
+$color-gray-light: #F6F6F6;
+
+$color-text: $color-black;
+$color-link: lighten($color-blue, 40);
+$color-link-hover: lighten($color-blue, 20);
+$color-link-active: lighten($color-blue, 60);
+
+$font-weight-bold: 800;
+$font-headings: Avenir;
+$font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
